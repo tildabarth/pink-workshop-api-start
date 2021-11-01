@@ -1,0 +1,35 @@
+[
+  {
+      "id": "g9379151",
+      "brand": "Hoka",
+      "model": "Clifton 8",
+      "name": "Clifton 8",
+      "colorway": "Outer Space/Atlantis",
+      "grade": 4,
+      "distance": 16,
+      "primary": true,
+      "retired": false
+  },
+  {
+      "id": "g6395762",
+      "brand": "Saucony",
+      "model": "Ride 14",
+      "name": "Ride 14",
+      "colorway": "Charcoal",
+      "grade": 2,
+      "distance": 2,
+      "primary": false,
+      "retired": true
+  },
+  {
+      "id": "g24973546",
+      "brand": "Adidas",
+      "model": "Supernova Glide 4",
+      "name": "Supernova Glide",
+      "colorway": "Black/Pink",
+      "grade": 3,
+      "distance": 3,
+      "primary": false,
+      "retired": false
+  }
+]
