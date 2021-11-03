@@ -47,8 +47,13 @@ It should look something similar to:
 ![Running repl](/workshop_src/img/replit-hello-world-running.png)
 
 > ### A Note on HTTP(S)
-If you during the workshop (in either project on Replit) have issues or errors referring to the page not being secure, try to replace `https://` with `http://`.<br>
+> If you during the workshop (in either project on Replit) have issues or errors referring to the page not being secure, try to replace `https://` with `http://`.<br>
 It's of course not an ideal solution, but good enough if it works. We're not creating production ready applications.
+
+
+We'll start with a simple template for a minimal application. This is what you run when you first start the project.
+
+The sections on **path parameters** and **query parameters** are only for reading, you don't have to type the examples, unless you want to.
 
 ### A Minimal Application
 
