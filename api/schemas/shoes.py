@@ -12,10 +12,7 @@ class Color(Enum):
     green: str = 'green'
     mixed: str = 'mixed'
     orange: str = 'orange'
-    pink: str = 'pink'
-    purple: str = 'purple'
     red: str = 'red'
-    white: str = 'white'
     yellow: str = 'yellow'
 
 
