@@ -7,12 +7,12 @@ from settings import get_settings
 settings = get_settings()
 app = FastAPI()
 
-
-# @app.on_event('startup')
-# def load_data():
-#     import data
-#     data.main()
-
+"""
+@app.on_event('startup')
+def load_data():
+    import data
+    data.main()
+"""
 
 @app.get('/')
 async def root():
