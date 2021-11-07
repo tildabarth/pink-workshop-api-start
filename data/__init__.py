@@ -10,6 +10,7 @@ import typing as t
 from pathlib import Path
 
 from api.schemas import runs as run_schemas, shoes as shoe_schemas
+from api.routes import custom_jsonable_encoder
 
 
 logger = logging.getLogger(__name__)
@@ -119,12 +120,9 @@ def save_runs(shoe_ids: t.Dict[str, id], override_target: bool = False, backup: 
                     run_dict[schema_key] = shoe_ids.get(run_dict[dict_key])
                 del run_dict[dict_key]
 
-        run_dict_create: ItemDict = run_schemas.RunCreate(**run_dict).dict()
-        run_dict_read: ItemDict = run_schemas.Run(id=item_id, **run_dict_create).dict()
-        # Convert start time back to string to enable serializing.
-        if 'start' in run_dict_read:
-            run_dict_read['start'] = run_dict['start']
-        schema_collection[item_id] = run_dict_read
+        created_item_dict = run_schemas.RunCreate(**run_dict).dict()
+        item_to_store = run_schemas.Run(**created_item_dict, id=item_id)
+        schema_collection[item_id] = custom_jsonable_encoder(item_to_store)
 
     # Store new collection in target file.
     with RUNS_TARGET.open('w', encoding=ENCODING) as f:
