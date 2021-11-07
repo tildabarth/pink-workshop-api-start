@@ -23,6 +23,11 @@ async def update(item_id: int, item: shoe_schemas.ShoeCreate):
     return {}
 
 
-async def deletete(item_id: int):
+async def update_partial(item_id: int, item: shoe_schemas.ShoeCreate):
+    """Partially update item by id."""
+    return {}
+
+
+async def delete(item_id: int):
     """Delete item by id."""
-    return None
+    ...

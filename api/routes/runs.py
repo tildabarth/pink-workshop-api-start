@@ -23,6 +23,11 @@ async def update(item_id: int, item: run_schemas.Run):
     return {}
 
 
+async def update_partial(item_id: int, item: run_schemas.Run):
+    """Partially update item by id."""
+    return {}
+
+
 async def delete(item_id: int):
     """Delete item by id."""
-    return None
+    ...
